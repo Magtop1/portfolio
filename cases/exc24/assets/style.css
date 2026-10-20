@@ -115,3 +115,14 @@ footer.site p{margin:0 0 6px;font-size:14px}
 
 .rev-link{display:inline-flex;align-items:center;min-height:48px;padding:0 20px;border:1px solid #0b6bcb;border-radius:12px;color:#0b6bcb;font:600 15px/1 system-ui,sans-serif;text-decoration:none;background:#fff;transition:background .2s,color .2s}
 .rev-link:hover{background:#0b6bcb;color:#fff}
+
+/* black-brand: клиент просил чёрный цвет знака и шапки */
+nav.main{background:#101828}
+nav.main a:hover{background:#000}
+.drop>ul{background:#1f2937}
+.hero{background:linear-gradient(160deg,#0b0f16,#1e293b)}
+.top{background:#0b0f16}
+.btn-primary{background:#101828}
+.btn-primary:hover{background:#000}
+.cta{border-left-color:#101828}
+.dock .d-tel{background:#101828}
