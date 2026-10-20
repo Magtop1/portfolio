@@ -199,6 +199,11 @@ ul,ol{margin:0;padding:0;list-style:none}
 
 .hero-lead{max-width:560px;color:var(--muted);font-size:17px;margin-bottom:28px}
 .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:40px}
+.hero-note{
+  margin:-22px 0 34px;
+  font:400 10px/1.6 "JetBrains Mono",monospace;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+}
 
 .facts{
   display:grid;grid-template-columns:repeat(4,auto);
