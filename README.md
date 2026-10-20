@@ -19,7 +19,7 @@ python -m http.server 8768
 2. **Telegram** — пока не подключён. Дать ник → заменить CTA на `https://t.me/<ник>`
    в шапке, мобильном меню и блоке «Контакты».
 3. **Домен** — `canonical`, `og:url`, `og:image` в `<head>` указывают на
-   `magtop1.pythonanywhere.com/s/portfolio/`. При переезде заменить.
+   `magtop1.github.io/portfolio/`. При переезде на свой домен заменить.
 4. **Цифры кейсов** — рейтинги и количество отзывов взяты с Яндекс.Карт
    (Monkey Li, Индикатор), 13 страниц — exc24. Сверить перед публикацией.
 5. **Сроки в услугах** — «1–2 недели», «2–4 недели», «от 1 недели» — ориентиры.
@@ -36,18 +36,26 @@ python -m http.server 8768
 Скриншоты лежат в `assets/` (WebP, 1280 px по ширине). Переснять можно
 headless Chrome, затем сжать в WebP.
 
-## Деплой на PythonAnywhere
+## Публикация
 
-Папка на сервере: `/home/Magtop1/outreach-bot/sites/portfolio/`.
+Основной адрес (GitHub Pages): `https://magtop1.github.io/portfolio/`.
+
+Репозиторий: `https://github.com/Magtop1/portfolio` (ветка `main`, корень).
+
+Обновление:
 
 ```powershell
-python pa_push.py   # если файл настроен на эту папку
+cd "C:\Users\Magtop1\Documents\Default Project\ayf-portfolio"
+git add -A
+git commit -m "update portfolio"
+git push
 ```
 
-Или вручную через API: загрузить `index.html`, `meta.json` и `assets/`
-в `sites/portfolio/`, затем reload webapp.
+GitHub Pages пересоберёт сайт автоматически за 30–90 секунд.
 
-Проверка: `https://magtop1.pythonanywhere.com/s/portfolio/`.
+Зеркало на PythonAnywhere: `/home/Magtop1/outreach-bot/sites/portfolio/`,
+`https://magtop1.pythonanywhere.com/s/portfolio/`. Обновляется через
+`pa_push.py` из папки `tg-bot`.
 
 ## Структура
 
