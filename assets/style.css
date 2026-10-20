@@ -377,7 +377,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 
 /* ── Band ─────────────────────────────────────────────── */
 .band{background:var(--ink);color:var(--paper);padding:62px 0}
-.band-in{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.band-in{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .band-item{border-left:1px solid var(--line-d);padding-left:24px}
 .band-item:first-child{border-left:0;padding-left:0}
 .band-item b{
