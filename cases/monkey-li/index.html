@@ -643,14 +643,39 @@ blockquote p,.tagline{font-variant-numeric:lining-nums}
 .sec--red .book-alt{color:rgba(255,255,255,.9)}
 .sec--red .book-alt a{color:#fff}
 /* цены */
-.pt-wrap{max-width:860px;border-radius:24px;background:var(--ink-2);box-shadow:inset 0 0 0 1px var(--line);padding:4px 16px 8px}
-@media (min-width:600px){.pt-wrap{padding:8px 30px 14px}}
+.pt-wrap{
+  max-width:860px;
+  margin-inline:auto;
+  border-radius:24px;
+  background:var(--ink-2);
+  box-shadow:inset 0 0 0 1px var(--line);
+  padding:4px 16px 8px;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;
+}
+@media (min-width:600px){
+  .pt-wrap{padding:8px 30px 14px}
+}
 .pt{width:100%;border-collapse:collapse}
 .pt th,.pt td{padding:12px 0;text-align:left;font-weight:inherit;border-bottom:1px solid var(--line);vertical-align:middle}
 .pt thead th{padding:16px 0 12px;font:600 11.5px/1.2 var(--f-body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border-bottom:0}
 .pt thead th+th,.pt td{text-align:right;padding-left:12px;white-space:nowrap;width:1%}
 .pt tbody th{font:500 16px/1.3 var(--f-body);padding-right:6px}
 .pt td{font:600 21px/1 var(--f-display);letter-spacing:.01em}
+@media (max-width:599px){
+  .pt-wrap{padding:4px 12px 6px}
+  .pt thead th,
+  .pt td{padding-left:8px}
+  .pt thead th{font-size:10.5px;letter-spacing:.08em}
+  .pt tbody th{font-size:15px;line-height:1.25;padding-right:4px}
+  .pt td{font-size:17px;padding:10px 0 10px 8px}
+  .pt .pt-g th{padding:16px 0 6px;font-size:13px;letter-spacing:.06em}
+  .pt tbody tr:first-child th{padding-top:2px}
+  /* скрыть колонку «Время» — она декоративна; освобождает ~70px под названия */
+  .pt thead th:nth-child(2),
+  .pt tbody tr:not(.pt-g) td:nth-child(2){display:none}
+}
 .pt td.na{color:#4d4a52;font-weight:500}
 .pt .pt-g th{padding:20px 0 8px;font:700 15px/1 var(--f-display);letter-spacing:.08em;text-transform:uppercase;color:var(--red-bright);border-bottom:2px solid var(--red)}
 .pt tbody tr:first-child th{padding-top:4px}
@@ -834,7 +859,7 @@ blockquote p,.tagline{font-variant-numeric:lining-nums}
           <div class="seal-core"><b>5,0</b><span class="stars" aria-label="Оценка 5 из 5"><svg class="ico " aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="ico " aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="ico " aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="ico " aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="ico " aria-hidden="true" focusable="false"><use href="#i-star"/></svg></span></div>
         </div>
       </div>
-      <p class="tagline">Стрижём так, как&nbsp;вы просите</p>
+      <p class="tagline">Свой стиль. Свой&nbsp;имидж</p>
       <p class="hero-sub">Стрижки, фейды, борода и&nbsp;детские стрижки. Два адреса&nbsp;— Запольная,&nbsp;60А и&nbsp;Ленина,&nbsp;95. Ежедневно <span class="nw">10:00–21:00</span>.</p>
       <div class="hero-cta">
         <div class="cta-main">
@@ -944,7 +969,7 @@ blockquote p,.tagline{font-variant-numeric:lining-nums}
     </div>
     <div class="mlist">
       <article class="mm mm--lead">
-        <span class="mm-ph" aria-hidden="true">А</span>
+        <span class="mm-ph" aria-hidden="true"><img src="assets/masters/artem.webp" alt="Артём — мастер Monkey Li" width="400" height="400" loading="lazy"></span>
         <div><h3>Артём <em>«Ли»</em></h3><p class="mm-role">Барбер ·&nbsp;Запольная и&nbsp;Ленина</p><span class="mm-tag">18+ отзывов с&nbsp;благодарностью по&nbsp;имени</span></div>
         <figure class="q">
           <blockquote><p>«…Выслушал все желания моего сына модника и&nbsp;воплотил их в&nbsp;жизнь!»</p></blockquote>
@@ -952,7 +977,7 @@ blockquote p,.tagline{font-variant-numeric:lining-nums}
         </figure>
       </article>
       <article class="mm">
-        <span class="mm-ph" aria-hidden="true">О</span>
+        <span class="mm-ph" aria-hidden="true"><img src="assets/masters/olga.webp" alt="Ольга — мастер Monkey Li" width="400" height="400" loading="lazy"></span>
         <div><h3>Ольга</h3><p class="mm-role">Мастер ·&nbsp;Запольная</p></div>
         <figure class="q">
           <blockquote><p>«Хочу поблагодарить Ольгу за&nbsp;классную стрижку и&nbsp;приятное общение. Мастер своего дела.»</p></blockquote>
@@ -960,7 +985,7 @@ blockquote p,.tagline{font-variant-numeric:lining-nums}
         </figure>
       </article>
       <article class="mm">
-        <span class="mm-ph" aria-hidden="true">Е</span>
+        <span class="mm-ph" aria-hidden="true"><img src="assets/masters/egor.webp" alt="Егор — мастер Monkey Li" width="400" height="400" loading="lazy"></span>
         <div><h3>Егор</h3><p class="mm-role">Мастер ·&nbsp;Ленина</p></div>
         <figure class="q">
           <blockquote><p>«Стриг мастер Егор, стрижкой доволен, все сделал на&nbsp;высшем уровне, рекомендую!»</p></blockquote>
@@ -968,7 +993,7 @@ blockquote p,.tagline{font-variant-numeric:lining-nums}
         </figure>
       </article>
       <article class="mm">
-        <span class="mm-ph" aria-hidden="true">А</span>
+        <span class="mm-ph" aria-hidden="true"><img src="assets/masters/sasha.webp" alt="Александр — мастер Monkey Li" width="400" height="400" loading="lazy"></span>
         <div><h3>Александр</h3><p class="mm-role">Мастер</p></div>
         <figure class="q">
           <blockquote><p>«Приятный молодой человек, мастер своего дела.»</p></blockquote>
