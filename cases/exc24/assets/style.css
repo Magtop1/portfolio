@@ -103,3 +103,15 @@ footer.site p{margin:0 0 6px;font-size:14px}
   footer.site{padding-bottom:96px}
   .p-price{width:130px}
 }
+
+/* --- правки клиента 20.10 --- */
+.btn-wa{background:#6f5bff;border-color:#6f5bff}
+.btn-wa:hover{background:#5a45f0;border-color:#5a45f0}
+.rev-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.photos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.photo-ph{aspect-ratio:4/3;border:1px dashed rgba(0,0,0,.22);border-radius:14px;
+  display:grid;place-items:center;color:#8a8f98;font:500 13px/1 system-ui,sans-serif;background:#f6f7f9}
+@media (max-width:760px){.photos{grid-template-columns:repeat(2,1fr)}}
+
+.rev-link{display:inline-flex;align-items:center;min-height:48px;padding:0 20px;border:1px solid #0b6bcb;border-radius:12px;color:#0b6bcb;font:600 15px/1 system-ui,sans-serif;text-decoration:none;background:#fff;transition:background .2s,color .2s}
+.rev-link:hover{background:#0b6bcb;color:#fff}
