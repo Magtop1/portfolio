@@ -64,6 +64,11 @@
     items.forEach((el) => el.classList.add('in'));
   }
 
+  /* Safety net: never leave content invisible if reveal never fired */
+  window.setTimeout(() => {
+    document.querySelectorAll('.rv:not(.in)').forEach((el) => el.classList.add('in'));
+  }, 2500);
+
   /* Lightbox */
   if (lightbox && lightbox.showModal) {
     document.querySelectorAll('[data-full]').forEach((btn) => {
