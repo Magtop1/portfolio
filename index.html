@@ -2,10 +2,12 @@
 <!--
   AYF — портфолио.
   ПЕРЕД ПУБЛИКАЦИЕЙ ПРОВЕРИТЬ:
-  1. Почта: magtope2@mail.ru (шапка, меню, контакты, футер).
-  2. Telegram пока не подключён: если дать ник — заменить CTA на t.me/<ник>.
+  1. Почта: magtope2@mail.ru (меню, контакты, футер).
+  2. Telegram: @Strixer122 — основной канал (шапка, меню, контакты, футер, JSON-LD).
   3. canonical / og:url / og:image — сейчас GitHub Pages; заменить на финальный домен.
-  4. Цифры в кейсах (рейтинги, отзывы, страницы) — сверить с клиентами.
+  4. Кейсы открываются из `cases/<slug>/` — зеркала внутри репозитория, не зависят
+     от PythonAnywhere (он в РФ не открывается без VPN).
+  5. Цифры в кейсах (рейтинги, отзывы, страницы) — сверить с клиентами.
 -->
 <html lang="ru">
 <head>
@@ -14,6 +16,7 @@
 <title>AYF — сайты для бизнеса | Алексей</title>
 <meta name="description" content="Лендинги и многостраничные сайты для локального бизнеса: структура, дизайн, вёрстка, SEO-база, запуск. Три проекта в продакшене. Работаю напрямую, без конструкторов.">
 <meta name="theme-color" content="#f1eee6">
+<meta name="author" content="Алексей">
 <meta property="og:type" content="website">
 <meta property="og:title" content="AYF — сайты, которые приводят клиентов">
 <meta property="og:description" content="Лендинги и многостраничные сайты для бизнеса. Структура, дизайн, чистый код, SEO-база, запуск.">
@@ -36,6 +39,8 @@
   "name": "AYF — сайты для бизнеса",
   "description": "Разработка лендингов и многостраничных сайтов для локального бизнеса: структура, дизайн, вёрстка, SEO-база, запуск.",
   "areaServed": "Россия",
+  "url": "https://magtop1.github.io/portfolio/",
+  "sameAs": ["https://t.me/Strixer122"],
   "founder": { "@type": "Person", "name": "Алексей" },
   "email": "magtope2@mail.ru"
 }
@@ -59,13 +64,14 @@
       <a href="#contact"><span>05</span>Контакты</a>
 
       <div class="nav-foot">
-        <a class="btn" href="mailto:magtope2@mail.ru">Написать на почту <span aria-hidden="true">↗</span></a>
+        <a class="btn" href="https://t.me/Strixer122" target="_blank" rel="noopener me">Написать в Telegram <span aria-hidden="true">↗</span></a>
+        <a class="nav-mail" href="https://t.me/Strixer122" target="_blank" rel="noopener me">@Strixer122</a>
         <a class="nav-mail" href="mailto:magtope2@mail.ru">magtope2@mail.ru</a>
         <p>Казань · удалённо по РФ</p>
       </div>
     </nav>
 
-    <a class="btn btn--sm hd-cta" href="mailto:magtope2@mail.ru">Написать <span aria-hidden="true">↗</span></a>
+    <a class="btn btn--sm hd-cta" href="https://t.me/Strixer122" target="_blank" rel="noopener me">Написать <span aria-hidden="true">↗</span></a>
 
     <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
       <span></span><span></span>
@@ -167,7 +173,7 @@
             <div><dt>5,0</dt><dd>рейтинг<br>на Яндекс Картах</dd></div>
             <div><dt>169</dt><dd>отзывов<br>у бизнеса</dd></div>
           </dl>
-          <a class="link" href="https://magtop1.pythonanywhere.com/s/monkey-li/" target="_blank" rel="noopener">Открыть сайт <span aria-hidden="true">↗</span></a>
+          <a class="link" href="cases/monkey-li/" target="_blank" rel="noopener">Открыть сайт <span aria-hidden="true">↗</span></a>
         </div>
       </article>
 
@@ -196,7 +202,7 @@
             <div><dt>13</dt><dd>страниц<br>в проекте</dd></div>
             <div><dt>8</dt><dd>направлений<br>ремонта</dd></div>
           </dl>
-          <a class="link" href="https://magtop1.pythonanywhere.com/s/exc24/" target="_blank" rel="noopener">Открыть сайт <span aria-hidden="true">↗</span></a>
+          <a class="link" href="cases/exc24/" target="_blank" rel="noopener">Открыть сайт <span aria-hidden="true">↗</span></a>
         </div>
       </article>
 
@@ -225,7 +231,7 @@
             <div><dt>5,0</dt><dd>рейтинг<br>на Яндекс Картах</dd></div>
             <div><dt>1</dt><dd>клик<br>до заявки</dd></div>
           </dl>
-          <a class="link" href="https://magtop1.pythonanywhere.com/s/indikator/" target="_blank" rel="noopener">Открыть сайт <span aria-hidden="true">↗</span></a>
+          <a class="link" href="cases/indikator/" target="_blank" rel="noopener">Открыть сайт <span aria-hidden="true">↗</span></a>
         </div>
       </article>
     </div>
@@ -371,9 +377,9 @@
       <h2 class="contact-h rv">Расскажите<br>о задаче<span class="contact-dot">.</span></h2>
 
       <div class="contact-bottom rv">
-        <p class="contact-lead">Напишите на почту, что нужно сделать и для какого бизнеса. Скажу, что имеет смысл делать, а что — нет, и назову сроки со стоимостью.</p>
+        <p class="contact-lead">Напишите в Telegram или на почту, что нужно сделать и для какого бизнеса. Скажу, что имеет смысл делать, а что — нет, и назову сроки со стоимостью.</p>
         <div class="contact-actions">
-          <a class="btn btn--light" href="mailto:magtope2@mail.ru">Написать на почту <span aria-hidden="true">↗</span></a>
+          <a class="btn btn--light" href="https://t.me/Strixer122" target="_blank" rel="noopener me">Написать в Telegram <span aria-hidden="true">↗</span></a>
           <a class="btn btn--outline" href="mailto:magtope2@mail.ru">magtope2@mail.ru</a>
         </div>
       </div>
@@ -392,6 +398,7 @@
     </a>
     <p class="ft-note">Сделано на чистом HTML, CSS и JS.<br>Без конструкторов и готовых тем.</p>
     <div class="ft-links">
+      <a href="https://t.me/Strixer122" target="_blank" rel="noopener me">Telegram @Strixer122</a>
       <a href="mailto:magtope2@mail.ru">Почта</a>
       <a href="#top">Наверх ↑</a>
     </div>
