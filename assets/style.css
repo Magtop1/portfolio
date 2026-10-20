@@ -497,6 +497,19 @@ ul,ol{margin:0;padding:0;list-style:none}
 }
 .price-card--main .pc-foot{border-color:var(--line-d);color:var(--muted-d)}
 
+.prices-extra{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+  margin-top:20px;padding:22px 26px;
+  border:1px solid var(--line);background:var(--paper);
+}
+.prices-extra div{display:flex;flex-direction:column;gap:6px}
+.prices-extra span{
+  font:400 9px/1.3 "JetBrains Mono",monospace;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+}
+.prices-extra b{font-family:"Oswald",sans-serif;font-weight:500;font-size:clamp(20px,2vw,26px);line-height:1}
+.prices-extra em{font-style:normal;font-size:13px;color:var(--muted)}
+
 .prices-budget{
   display:grid;grid-template-columns:7fr 5fr;gap:44px;align-items:center;
   margin-top:56px;padding-top:36px;border-top:1px solid var(--line);
@@ -538,6 +551,33 @@ ul,ol{margin:0;padding:0;list-style:none}
   line-height:1;text-transform:uppercase;margin-bottom:7px;
 }
 .steps p{color:var(--muted);font-size:15px;max-width:600px}
+
+/* ── Terminal card (about) ────────────────────────────── */
+.term{
+  display:flex;flex-direction:column;overflow:hidden;
+  background:var(--ink);color:var(--paper);border:1px solid var(--ink);
+  box-shadow:0 30px 60px -40px rgba(18,18,15,.9);
+}
+.term-bar{
+  display:flex;align-items:center;gap:7px;
+  padding:13px 16px;border-bottom:1px solid rgba(241,238,230,.14);
+}
+.term-bar i{width:8px;height:8px;border-radius:50%;background:rgba(241,238,230,.22)}
+.term-bar i:first-child{background:var(--accent-d);opacity:.9}
+.term-bar span{
+  margin-left:10px;font:400 10px/1 "JetBrains Mono",monospace;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--muted-d);
+}
+.term-body{
+  margin:0;padding:26px 24px 30px;
+  font:400 13.5px/1.85 "JetBrains Mono",monospace;
+  white-space:pre-wrap;overflow-wrap:anywhere;
+  color:#a9a49a;
+}
+.term-body .p{color:var(--accent-d)}
+.term-body .o{color:#dcd8ce}
+.caret{color:var(--accent-d);animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
 
 /* ── About ────────────────────────────────────────────── */
 .about-in{display:grid;grid-template-columns:5fr 6fr;gap:8%;align-items:start}
@@ -686,6 +726,7 @@ ul,ol{margin:0;padding:0;list-style:none}
   .sec{padding:96px 0}
   .prices-grid{grid-template-columns:1fr}
   .prices-strip{grid-template-columns:1fr 1fr;gap:20px 16px}
+  .prices-extra{grid-template-columns:1fr}
   .price-card .pc-desc{min-height:0}
   .prices-budget{grid-template-columns:1fr;gap:28px}
   .guarantees{grid-template-columns:1fr 1fr;gap:22px 18px}

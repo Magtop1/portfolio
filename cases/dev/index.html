@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Алексей — миры, в которые заходят жить</title>
+<meta name="description" content="Разработчик Minecraft-сети SoulSand: режимы, плагины, инфраструктура.">
+<meta name="theme-color" content="#05070a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;500;700;900&family=Manrope:wght@300;400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="loader" id="loader">
+  <div class="loader-count"><span id="loaderNum">0</span><small>%</small></div>
+  <div class="loader-bar"><i id="loaderBar"></i></div>
+  <div class="loader-cap mono">разжигаю сцену</div>
+</div>
+
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"><i class="cursor-dot"></i><i class="cursor-ring"></i></div>
+
+<header class="top">
+  <a href="#hero" class="logo" data-hover><span class="logo-mark"></span>АЛЕКСЕЙ</a>
+  <nav class="nav">
+    <a href="#work" data-hover>Проекты</a>
+    <a href="#network" data-hover>Сеть</a>
+    <a href="#method" data-hover>Подход</a>
+    <a href="#contact" data-hover>Связь</a>
+  </nav>
+  <div class="clock mono"><span class="pulse"></span>МСК <span id="clock">--:--:--</span></div>
+  <details class="mnav">
+    <summary aria-label="Открыть меню">Меню</summary>
+    <div class="mnav-list">
+      <a href="#work">Проекты</a>
+      <a href="#network">Сеть</a>
+      <a href="#method">Подход</a>
+      <a href="#contact">Связь</a>
+    </div>
+  </details>
+</header>
+
+<main>
+  <section class="hero" id="hero">
+    <p class="eyebrow mono reveal-up">Minecraft · плагины · инфраструктура</p>
+    <h1 class="hero-title">
+      <span class="line"><span>Строю миры,</span></span>
+      <span class="line"><span>в которые</span></span>
+      <span class="line"><span class="accent">заходят жить.</span></span>
+    </h1>
+    <div class="hero-foot">
+      <p class="hero-lead reveal-up">Делаю сеть <b>SoulSand</b>: от прокси и железа до экономики, в которой нельзя задюпать.</p>
+      <div class="hero-now mono reveal-up"><span class="pulse"></span>Сейчас в работе — SoulForge</div>
+      <a href="#manifesto" class="scroll-hint mono reveal-up" data-hover><span>Листай</span><i></i></a>
+    </div>
+  </section>
+
+  <section class="manifesto" id="manifesto">
+    <p class="mono label">00 — Манифест</p>
+    <p class="manifesto-text" id="manifestoText">Игрок не видит плагинов, портов и формул. Он видит мир, который отвечает ему честно. Моя работа — сделать так, чтобы за каждым блоком, каждой наградой и каждым перезапуском стояла система, которая не ломается, не дюпается и не заставляет ждать.</p>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Java</span><span>Velocity</span><span>Paper</span><span>Purpur</span><span>Gradle</span><span>Pelican</span><span>OVH</span><span>Python</span><span>Happ</span>
+      <span>Java</span><span>Velocity</span><span>Paper</span><span>Purpur</span><span>Gradle</span><span>Pelican</span><span>OVH</span><span>Python</span><span>Happ</span>
+    </div>
+  </div>
+
+  <section class="work" id="work">
+    <div class="work-pin">
+      <div class="work-head">
+        <p class="mono label">01 — Проекты</p>
+        <h2 class="h2">Что уже<br>работает</h2>
+      </div>
+      <div class="track" id="track">
+        <article class="card" data-tilt>
+          <div class="card-art art-1"><span class="card-num">01</span></div>
+          <div class="card-body">
+            <p class="card-tag mono">Сеть серверов</p>
+            <h3>SoulSand</h3>
+            <p>Своя Minecraft-сеть: прокси Velocity, хаб и отдельные режимы за ним. Всё крутится на выделенной машине под панелью Pelican.</p>
+            <ul class="chips"><li>Velocity</li><li>Pelican</li><li>OVH</li></ul>
+          </div>
+        </article>
+        <article class="card" data-tilt>
+          <div class="card-art art-2"><span class="card-num">02</span></div>
+          <div class="card-body">
+            <p class="card-tag mono">Живой режим</p>
+            <h3>Prison Evo</h3>
+            <p>Боевой Prison на Paper 1.20.1. Перезапуск — только с предупреждением игрокам, выкатка — по регламенту: стоп, загрузка, старт.</p>
+            <ul class="chips"><li>Paper 1.20.1</li><li>Java</li></ul>
+          </div>
+        </article>
+        <article class="card" data-tilt>
+          <div class="card-art art-3"><span class="card-num">03</span></div>
+          <div class="card-body">
+            <p class="card-tag mono">Своя прогрессия</p>
+            <h3>Prison Normal</h3>
+            <p>Режим на Purpur 1.19.4, где ценность — в добыче, а не в деньгах. Следующий шаг — логова: данжи с магией и скиллами.</p>
+            <ul class="chips"><li>Purpur 1.19.4</li><li>Экономика</li></ul>
+          </div>
+        </article>
+        <article class="card" data-tilt>
+          <div class="card-art art-4"><span class="card-num">04</span></div>
+          <div class="card-body">
+            <p class="card-tag mono">Новый режим</p>
+            <h3>SoulForge</h3>
+            <p>Следующий режим сети. Собирается и обкатывается на отдельном тестовом стенде, прежде чем выйти к игрокам.</p>
+            <ul class="chips"><li class="live">В разработке</li></ul>
+          </div>
+        </article>
+        <article class="card" data-tilt>
+          <div class="card-art art-5"><span class="card-num">05</span></div>
+          <div class="card-body">
+            <p class="card-tag mono">Визуал</p>
+            <h3>Ресурспаки</h3>
+            <p>Собственные паки и скрипты, которые проверяют их и конвертируют под нужные версии игры.</p>
+            <ul class="chips"><li>Python</li><li>Resource packs</li></ul>
+          </div>
+        </article>
+        <article class="card" data-tilt>
+          <div class="card-art art-6"><span class="card-num">06</span></div>
+          <div class="card-body">
+            <p class="card-tag mono">Инфраструктура</p>
+            <h3>Свой VPN</h3>
+            <p>Личная сеть: подписка в Happ, основной узел на OVH и резервный релей через Yandex Cloud на случай белых списков.</p>
+            <ul class="chips"><li>Happ</li><li>OVH</li><li>Yandex Cloud</li></ul>
+          </div>
+        </article>
+      </div>
+      <div class="work-progress"><i id="workProgress"></i></div>
+    </div>
+  </section>
+
+  <section class="network" id="network">
+    <p class="mono label">02 — Сеть</p>
+    <h2 class="h2">Путь игрока<br>за одну секунду</h2>
+    <p class="network-lead">Один адрес на входе. Дальше прокси решает, куда тебя отправить, а каждый режим живёт в своём контейнере и падает, не задевая соседей.</p>
+    <div class="diagram">
+      <svg viewBox="0 0 1000 440" id="diagram" role="img" aria-label="Схема сети: игрок, прокси Velocity, хаб и режимы">
+        <defs>
+          <linearGradient id="lg" x1="0" x2="1">
+            <stop offset="0" stop-color="#5ee7ff" stop-opacity=".15"/>
+            <stop offset="1" stop-color="#5ee7ff" stop-opacity=".9"/>
+          </linearGradient>
+          <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="4" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <g class="wires" fill="none" stroke="url(#lg)" stroke-width="1.6">
+          <path id="w1" d="M110 220 C 190 220, 220 220, 300 220"/>
+          <path id="w2" d="M380 220 C 450 220, 480 220, 540 220"/>
+          <path id="w3" d="M620 220 C 700 220, 720 90, 800 90"/>
+          <path id="w4" d="M620 220 C 700 220, 720 220, 800 220"/>
+          <path id="w5" d="M620 220 C 700 220, 720 350, 800 350" stroke-dasharray="5 7"/>
+        </g>
+        <g class="packets" fill="#cff8ff" filter="url(#glow)">
+          <circle r="3.5"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#w1"/></animateMotion></circle>
+          <circle r="3.5"><animateMotion dur="2.4s" begin=".8s" repeatCount="indefinite"><mpath href="#w2"/></animateMotion></circle>
+          <circle r="3"><animateMotion dur="2.8s" begin="1.4s" repeatCount="indefinite"><mpath href="#w3"/></animateMotion></circle>
+          <circle r="3"><animateMotion dur="2.6s" begin="1.9s" repeatCount="indefinite"><mpath href="#w4"/></animateMotion></circle>
+          <circle r="2.5" opacity=".6"><animateMotion dur="3.4s" begin="2.3s" repeatCount="indefinite"><mpath href="#w5"/></animateMotion></circle>
+        </g>
+        <g class="nodes">
+          <g class="node" transform="translate(70 220)"><circle r="40"/><text y="5">Игрок</text><text class="sub" y="68">ты</text></g>
+          <g class="node core" transform="translate(340 220)"><circle r="40"/><text y="5">Velocity</text><text class="sub" y="68">прокси · :25565</text></g>
+          <g class="node" transform="translate(580 220)"><circle r="40"/><text y="5">Hub</text><text class="sub" y="68">лобби</text></g>
+          <g class="node" transform="translate(860 90)"><rect x="-60" y="-26" width="120" height="52" rx="12"/><text y="5">Normal</text></g>
+          <g class="node" transform="translate(860 220)"><rect x="-60" y="-26" width="120" height="52" rx="12"/><text y="5">Evo</text></g>
+          <g class="node test" transform="translate(860 350)"><rect x="-60" y="-26" width="120" height="52" rx="12"/><text y="5">SoulForge</text><text class="sub" y="48">тест-стенд</text></g>
+        </g>
+      </svg>
+    </div>
+    <div class="facts">
+      <div class="fact"><b data-count="1">0</b><span>вход для всех режимов</span></div>
+      <div class="fact"><b data-count="2">0</b><span>боевых Prison-режима</span></div>
+      <div class="fact"><b data-count="2">0</b><span>тестовых стенда-близнеца</span></div>
+      <div class="fact"><b data-count="0">0</b><span>перезапусков без предупреждения</span></div>
+    </div>
+  </section>
+
+  <section class="method" id="method">
+    <p class="mono label">03 — Подход</p>
+    <h2 class="h2">Четыре правила,<br>которые не нарушаю</h2>
+    <ol class="rules">
+      <li class="rule"><span class="mono">I</span><h3>Одна механика за раз</h3><p>Довожу её до идеала, проверяю соседние системы и смотрю результат на живом сервере.</p></li>
+      <li class="rule"><span class="mono">II</span><h3>Каждая правка — аудит дюпов</h3><p>Экономику ломают не баги, а лазейки. Ищу их раньше игроков.</p></li>
+      <li class="rule"><span class="mono">III</span><h3>Фича без админа</h3><p>Если до механики нельзя дойти обычному игроку, её не существует.</p></li>
+      <li class="rule"><span class="mono">IV</span><h3>Проверяю руками</h3><p>Не боты и не отчёты — сам захожу в игру и прохожу путь игрока.</p></li>
+    </ol>
+  </section>
+
+  <section class="contact" id="contact">
+  <p class="mono label">04 — Связь</p>
+  <h2 class="contact-title"><span class="line"><span>Давай</span></span><span class="line"><span class="accent">строить.</span></span></h2>
+  <div class="contact-grid">
+    <a class="magnet" href="https://t.me/Strixer122" target="_blank" rel="noopener" data-hover>
+      <span class="magnet-inner">Написать в Telegram</span>
+    </a>
+    <div class="contact-info">
+      <p class="contact-desc">Открыт к интересным проектам в геймдеве, инфраструктуре и не только. Отвечаю быстро.</p>
+      <ul class="contact-links">
+        <li><span class="mono">TG</span> <a href="https://t.me/Strixer122" target="_blank" data-hover>@Strixer122</a></li>
+        <li><span class="mono">EM</span> <a href="mailto:magtope2@mail.ru" data-hover>magtope2@mail.ru</a></li>
+        <li><span class="mono">GH</span> <a href="https://github.com/" target="_blank" data-hover>GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot mono">
+  <span>© <span id="year">2026</span> AYF</span>
+  <span>Сделано вручную, без шаблонов</span>
+  <a href="#hero" data-hover>Наверх ↑</a>
+</footer>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
