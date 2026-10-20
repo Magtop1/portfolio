@@ -176,3 +176,8 @@ nav.main a:hover { background: #1f2937; }
   box-shadow:0 10px 30px rgba(16,24,40,.12);position:relative}
 .maps-embed iframe{display:block;width:100%;height:380px;border:0}
 @media (max-width:760px){.maps-embed iframe{height:300px}}
+
+/* главная: три фото + ссылка на галерею */
+.photos--home{grid-template-columns:repeat(3,1fr)}
+@media (max-width:760px){.photos--home{grid-template-columns:1fr 1fr}.photos--home a:nth-child(3){display:none}}
+.more-link{margin:18px 0 0}
