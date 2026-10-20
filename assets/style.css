@@ -389,7 +389,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .sec--ink .sec-head{border-color:var(--line-d)}
 .sec--ink .sec-sub{color:var(--muted-d)}
 
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:56px}
 .service{
   position:relative;border:1px solid var(--line-d);padding:34px 30px 30px;
   display:flex;flex-direction:column;
@@ -433,6 +433,72 @@ ul,ol{margin:0;padding:0;list-style:none}
   content:"✳";position:absolute;left:0;top:0;color:var(--accent-d);font-size:11px;
 }
 
+/* ── Prices ───────────────────────────────────────────── */
+.prices-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px}
+.price-card{
+  position:relative;display:flex;flex-direction:column;
+  border:1px solid var(--line);background:var(--paper);
+  padding:32px 28px 26px;
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s;
+}
+.price-card:hover{transform:translateY(-4px);border-color:var(--ink);box-shadow:0 26px 50px -32px rgba(18,18,15,.5)}
+.price-card--main{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.pc-badge{
+  position:absolute;top:-1px;right:-1px;
+  background:var(--accent);color:#fff;
+  padding:8px 12px;font:500 9px/1 "JetBrains Mono",monospace;
+  letter-spacing:.14em;text-transform:uppercase;
+}
+.pc-tag{
+  font:500 10px/1.4 "JetBrains Mono",monospace;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+  margin-bottom:22px;
+}
+.price-card--main .pc-tag{color:var(--accent-d)}
+.pc-price{
+  display:flex;align-items:baseline;gap:7px;margin-bottom:16px;
+  font-family:"Oswald",sans-serif;font-weight:600;
+  font-size:clamp(44px,4.4vw,62px);line-height:.9;letter-spacing:-.01em;
+}
+.pc-price small{font:500 13px/1 "JetBrains Mono",monospace;letter-spacing:.04em;color:var(--muted)}
+.price-card--main .pc-price small{color:var(--muted-d)}
+.pc-desc{font-size:15px;color:var(--muted);margin-bottom:26px;min-height:68px}
+.price-card--main .pc-desc{color:var(--muted-d)}
+.pc-list{display:grid;gap:9px;margin-bottom:26px}
+.pc-list li{position:relative;padding-left:20px;font-size:14px}
+.pc-list li::before{content:"";position:absolute;left:0;top:.68em;width:8px;height:1px;background:var(--accent)}
+.price-card--main .pc-list li::before{background:var(--accent-d)}
+.pc-foot{
+  margin-top:auto;padding-top:16px;border-top:1px solid var(--line);
+  font:400 10px/1.5 "JetBrains Mono",monospace;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--muted);
+}
+.price-card--main .pc-foot{border-color:var(--line-d);color:var(--muted-d)}
+
+.prices-budget{
+  display:grid;grid-template-columns:7fr 5fr;gap:44px;align-items:center;
+  margin-top:56px;padding-top:36px;border-top:1px solid var(--line);
+}
+.pb-title{
+  font:500 11px/1.4 "JetBrains Mono",monospace;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+  margin-bottom:12px;
+}
+.pb-text{font-size:16px;max-width:560px}
+.pb-list{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pb-list li{display:flex;flex-direction:column;gap:7px;border-left:1px solid var(--line);padding-left:16px}
+.pb-list b{font-family:"Oswald",sans-serif;font-weight:500;font-size:27px;line-height:1}
+.pb-list span{font:400 9px/1.4 "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+.guarantees{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+  margin-top:44px;padding-top:30px;border-top:1px solid var(--line);
+}
+.guarantees li{display:flex;flex-direction:column;gap:7px;border-left:1px solid var(--line);padding-left:18px}
+.guarantees li:first-child{border-left:0;padding-left:0}
+.guarantees b{font-size:15px}
+.guarantees span{font:400 9px/1.4 "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
 /* ── Process ──────────────────────────────────────────── */
 .steps{margin-top:20px}
 .steps li{
@@ -456,7 +522,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .about-card{
   position:relative;aspect-ratio:4/5;background:var(--paper-2);
   border:1px solid var(--ink);overflow:hidden;
-  display:flex;flex-direction:column;justify-content:space-between;
+  display:flex;flex-direction:column;justify-content:flex-end;
   padding:26px;
 }
 .about-card::before{
@@ -465,14 +531,15 @@ ul,ol{margin:0;padding:0;list-style:none}
   background-size:25% 25%;opacity:.5;
 }
 .about-mono{
-  position:relative;z-index:1;
+  position:absolute;left:50%;bottom:44px;transform:translateX(-50%);
+  z-index:0;
   font-family:"Oswald",sans-serif;font-weight:600;
-  font-size:clamp(180px,26vw,340px);line-height:.75;
+  font-size:clamp(200px,26vw,330px);line-height:.72;
   color:var(--accent);letter-spacing:-.04em;
-  margin-left:-.06em;margin-top:auto;
+  opacity:.16;pointer-events:none;
 }
 .about-card-foot{
-  position:relative;z-index:1;display:flex;justify-content:space-between;gap:12px;
+  position:relative;z-index:2;display:flex;justify-content:space-between;gap:12px;
   font:500 10px/1.4 "JetBrains Mono",monospace;
   letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
   border-top:1px solid var(--line);padding-top:14px;
@@ -595,6 +662,10 @@ ul,ol{margin:0;padding:0;list-style:none}
   .case--rev .case-body{order:0}
   .phone{left:auto;right:-10px;bottom:-30px;width:112px}
   .sec{padding:96px 0}
+  .prices-grid{grid-template-columns:1fr}
+  .price-card .pc-desc{min-height:0}
+  .prices-budget{grid-template-columns:1fr;gap:28px}
+  .guarantees{grid-template-columns:1fr 1fr;gap:22px 18px}
 }
 
 @media (max-width:900px){
@@ -669,6 +740,9 @@ ul,ol{margin:0;padding:0;list-style:none}
   .ft-links{margin-left:0;width:100%}
   .steps li{grid-template-columns:52px 1fr;gap:14px}
   .steps h3{font-size:23px}
+  .pb-list{grid-template-columns:1fr;gap:14px}
+  .pb-list li{border-left:0;border-top:1px solid var(--line);padding-left:0;padding-top:12px}
+  .guarantees{grid-template-columns:1fr}
 }
 
 @media (prefers-reduced-motion:reduce){
