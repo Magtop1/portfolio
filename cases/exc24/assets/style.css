@@ -181,3 +181,8 @@ nav.main a:hover { background: #1f2937; }
 .photos--home{grid-template-columns:repeat(3,1fr)}
 @media (max-width:760px){.photos--home{grid-template-columns:1fr 1fr}.photos--home a:nth-child(3){display:none}}
 .more-link{margin:18px 0 0}
+
+/* иконки рубрик */
+.card-ico{display:block;width:56px;height:56px;margin-bottom:14px;opacity:.92}
+.card:hover .card-ico{opacity:1}
+
